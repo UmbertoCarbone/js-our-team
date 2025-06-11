@@ -54,11 +54,13 @@ console.log(teamMembers);
 const rowEl = document.querySelector(".row");
 
 
+
+
 let cards = "";
 
 // Ciclo for per ogni membro 
 for (let i = 0; i < teamMembers.length; i++) {
-  const member = teamMembers[i];
+  const member = teamMembers[i]; // i 0, 1, 2, 3
   cards +=
 
 
@@ -86,9 +88,7 @@ for (let i = 0; i < teamMembers.length; i++) {
 // Inserisci tutte le card nel container
 rowEl.innerHTML = cards;
 
-
-
-
+//nuovo membro
 const addTeam = [
   {
     name: "Umberto Carbone",
@@ -96,10 +96,34 @@ const addTeam = [
     email: "umbertocarbone@team.com",
     img: "img/umbcar.jpg"
   }
-
+  
 ]
-  const nuovoTeam = [...teamMembers, ...addTeam]
-console.log(rowEl)
+const nuovoTeam = [...teamMembers, ...addTeam]
+console.log(nuovoTeam)
 
 
+// const newMember = {
+//     name: "Umberto Carbone",
+//     role: "Developer",
+//     email: "umbertocarbone@team.com",
+//     img: "img/umbcar.jpg"
+//   }
 
+// rowEl.innerHTML += `
+    
+//   <div class="card mb-3">
+//    <div class="row g-4">
+//      <div class="col-md-4">
+//        <img src="${newMember.img}">
+//      </div>
+//      <div class="col-md-8">
+//        <div class="card-body">
+//          <h5 class="card-title">${newMember.name}</h5>
+//          <p class="card-text">${newMember.role}</p>
+//          <p class="card-text">${newMember.email}</p>
+//       </div >
+//     </div >
+//   </div >
+// </div> 
+
+//  `;
