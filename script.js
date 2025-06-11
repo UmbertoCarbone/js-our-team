@@ -98,8 +98,7 @@ const addTeam = [
   }
   
 ]
-const nuovoTeam = [...teamMembers, ...addTeam]
-console.log(nuovoTeam)
+
 
 
 // const newMember = {
@@ -127,3 +126,33 @@ console.log(nuovoTeam)
 // </div> 
 
 //  `;
+for (let i = 0; i < addTeam.length; i++) {
+  const memberNew = addTeam[i]; // i 0, 1, 2, 3
+  cards +=
+
+
+    // generazione del template literal ``
+    `
+    
+  <div class="card mb-3">
+   <div class="row g-4">
+     <div class="col-md-4">
+       <img src="${memberNew.img}" style=width:200px>
+     </div>
+     <div class="col-md-8">
+       <div class="card-body">
+         <h5 class="card-title">${memberNew.name}</h5>
+         <p class="card-text">${memberNew.role}</p>
+         <p class="card-text">${memberNew.email}</p>
+      </div >
+    </div >
+  </div >
+</div> 
+
+ `
+}
+
+// Inserisci tutte le card nel container
+rowEl.innerHTML = cards;
+const nuovoTeam = [...teamMembers, ...addTeam]
+console.log(nuovoTeam)
