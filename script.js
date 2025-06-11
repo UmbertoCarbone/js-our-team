@@ -89,7 +89,7 @@ for (let i = 0; i < teamMembers.length; i++) {
 rowEl.innerHTML = cards;
 
 //nuovo membro
-const addTeam = [
+const addNewMember = [
   {
     name: "Umberto Carbone",
     role: "Developer",
@@ -126,8 +126,8 @@ const addTeam = [
 // </div> 
 
 //  `;
-for (let i = 0; i < addTeam.length; i++) {
-  const memberNew = addTeam[i]; // i 0, 1, 2, 3
+for (let i = 0; i < addNewMember.length; i++) {
+  const memberNew = addNewMember[i]; // i 0, 1, 2, 3
   cards +=
 
 
@@ -154,5 +154,7 @@ for (let i = 0; i < addTeam.length; i++) {
 
 // Inserisci tutte le card nel container
 rowEl.innerHTML = cards;
-const nuovoTeam = [...teamMembers, ...addTeam]
+
+
+const nuovoTeam = [...teamMembers, ...addNewMember]
 console.log(nuovoTeam)
